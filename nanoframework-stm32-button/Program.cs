@@ -14,8 +14,12 @@ namespace nanoframework_stm32_button
         private static GpioPinValue ledPinValue = GpioPinValue.High;
         public static void Main()
         {
-            //source: Push button - Raspberry Pi
-            //https://docs.microsoft.com/en-us/samples/microsoft/windows-iotcore-samples/push-button/
+            /*
+            Board: ST Nucleo64 F411RE
+            source: Push button - Raspberry Pi
+            https://docs.microsoft.com/en-us/samples/microsoft/windows-iotcore-samples/push-button/
+            */
+
             // ST Nucleo64 F411RE: PA5 is LED_GREEN
             LED_PIN = PinNumber('A', 5);
             // ST Nucleo64 F411RE: PC13 is B1_USER
