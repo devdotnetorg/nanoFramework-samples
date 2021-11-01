@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <NanoFrameworkProjectSystemPath>$(MSBuildToolsPath)..\..\..\nanoFramework\v1.0\</NanoFrameworkProjectSystemPath>
+  </PropertyGroup>
+  <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.Default.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{11A8DD76-328B-46DF-9F39-F559912D0360};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>a1990e26-760d-4cda-aedc-ddb719bd4b33</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Ssd13xx</RootNamespace>
+    <AssemblyName>Ssd13xx</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
+  <ItemGroup>
+    <Compile Include="Commands\ActivateScroll.cs" />
+    <Compile Include="Commands\DeactivateScroll.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\ISharedCommand.cs" />
+    <Compile Include="Commands\ISsd1306Command.cs" />
+    <Compile Include="Commands\ISsd1327Command.cs" />
+    <Compile Include="Commands\SetContrastControlForBank0.cs" />
+    <Compile Include="Commands\SetDisplayOff.cs" />
+    <Compile Include="Commands\SetDisplayOn.cs" />
+    <Compile Include="Commands\SetInverseDisplay.cs" />
+    <Compile Include="Commands\SetMultiplexRatio.cs" />
+    <Compile Include="Commands\Ssd1306Commands\ContinuousVerticalAndHorizontalScrollSetup.cs" />
+    <Compile Include="Commands\Ssd1306Commands\EntireDisplayOn.cs" />
+    <Compile Include="Commands\Ssd1306Commands\HorizontalScrollSetup.cs" />
+    <Compile Include="Commands\Ssd1306Commands\NoOperation.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetChargePump.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetColumnAddress.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetComOutputScanDirection.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetComPinsHardwareConfiguration.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetDisplayClockDivideRatioOscillatorFrequency.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetDisplayOffset.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetDisplayStartLine.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetHigherColumnStartAddressForPageAddressingMode.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetLowerColumnStartAddressForPageAddressingMode.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetMemoryAddressingMode.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetNormalDisplay.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetPageAddress.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetPageStartAddressForPageAddressingMode.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetPreChargePeriod.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetSegmentReMap.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetVcomhDeselectLevel.cs" />
+    <Compile Include="Commands\Ssd1306Commands\SetVerticalScrollArea.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SelectDefaultLinearGrayScaleTable.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetColumnAddress.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetComDeselectVoltageLevel.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetDisplayClockDivideRatioOscillatorFrequency.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetDisplayOffset.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetDisplayStartLine.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetInternalVddRegulator.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetNormalDisplay.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetPhaseLength.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetPreChargeVoltage.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetReMap.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetRowAddress.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetSecondPreChargePeriod.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetSecondPreChargeVsl.cs" />
+    <Compile Include="Commands\Ssd1327Commands\SetUnlockDriver.cs" />
+    <Compile Include="IFont.cs" />
+    <Compile Include="ListByte.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ssd1306.cs" />
+    <Compile Include="Ssd1327.cs" />
+    <Compile Include="Ssd13xx.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib, Version=1.10.5.4, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\..\packages\nanoFramework.CoreLibrary.1.10.5\lib\mscorlib.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Device.I2c, Version=1.0.1.2, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\..\packages\nanoFramework.System.Device.I2c.1.0.1\lib\System.Device.I2c.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
+  <ProjectExtensions>
+    <ProjectCapabilities>
+      <ProjectConfigurationsDeclaredAsItems />
+    </ProjectCapabilities>
+  </ProjectExtensions>
+</Project>
