@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoframework-esp32-mpr121", "nanoframework-esp32-mpr121\nanoframework-esp32-mpr121.nfproj", "{E05F0EFB-3CCC-4758-8BCD-D3913865A930}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{BA874358-8151-4F79-8E42-2754DE79AB9C}"
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "Mpr121", "libs\Mpr121\Mpr121.nfproj", "{31835C4E-AFF4-4AFF-8E98-F7741F810234}"
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "BinaryPrimitives", "libs\BinaryPrimitives\BinaryPrimitives.nfproj", "{C88F25C1-630E-4F3A-97AE-334894013C97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E05F0EFB-3CCC-4758-8BCD-D3913865A930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E05F0EFB-3CCC-4758-8BCD-D3913865A930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E05F0EFB-3CCC-4758-8BCD-D3913865A930}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E05F0EFB-3CCC-4758-8BCD-D3913865A930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E05F0EFB-3CCC-4758-8BCD-D3913865A930}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E05F0EFB-3CCC-4758-8BCD-D3913865A930}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{31835C4E-AFF4-4AFF-8E98-F7741F810234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31835C4E-AFF4-4AFF-8E98-F7741F810234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31835C4E-AFF4-4AFF-8E98-F7741F810234}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{31835C4E-AFF4-4AFF-8E98-F7741F810234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31835C4E-AFF4-4AFF-8E98-F7741F810234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31835C4E-AFF4-4AFF-8E98-F7741F810234}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C88F25C1-630E-4F3A-97AE-334894013C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C88F25C1-630E-4F3A-97AE-334894013C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C88F25C1-630E-4F3A-97AE-334894013C97}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C88F25C1-630E-4F3A-97AE-334894013C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C88F25C1-630E-4F3A-97AE-334894013C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C88F25C1-630E-4F3A-97AE-334894013C97}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{31835C4E-AFF4-4AFF-8E98-F7741F810234} = {BA874358-8151-4F79-8E42-2754DE79AB9C}
+		{C88F25C1-630E-4F3A-97AE-334894013C97} = {BA874358-8151-4F79-8E42-2754DE79AB9C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {853B281A-4F53-4C44-8558-A0EA2A1FC8A7}
+	EndGlobalSection
+EndGlobal
