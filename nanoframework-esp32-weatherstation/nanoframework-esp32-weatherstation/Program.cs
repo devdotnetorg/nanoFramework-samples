@@ -41,7 +41,12 @@ namespace nanoframework_esp32_weatherstation
 
             // set this to the current sea level pressure in the area for correct altitude readings
             Pressure defaultSeaLevelPressure = WeatherHelper.MeanSeaLevel;
-
+            //Tested with 128x64 and 128x32 OLEDs
+            using Ssd1306 device = new Ssd1306(I2cDevice.Create(new I2cConnectionSettings(busId, Ssd1306.DefaultI2cAddress)), Ssd13xx.DisplayResolution.OLED128x64);
+            device.ClearScreen();
+            device.DrawHorizontalLine(10, 10, 10);            
+            device.Display();
+            //
             while (true)
             {
                 // Perform a synchronous measurement
