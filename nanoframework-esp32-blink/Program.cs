@@ -12,6 +12,7 @@ namespace nanoframework_esp32_blink
         {
             s_GpioController = new GpioController();
             // ESP32 DevKit: 4 is a valid GPIO pin in, some boards like Xiuxin ESP32 may require GPIO Pin 2 instead.
+			// LILYGO TTGO T-Energy ESP32-WROVER: GPIO Pin 5 Blue
             GpioPin led = s_GpioController.OpenPin(2,PinMode.Output);
             led.Write(PinValue.Low);
             while (true)
