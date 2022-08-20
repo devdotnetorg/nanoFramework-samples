@@ -17,9 +17,9 @@ namespace Iot.Device.Ssd13xx
         /// Default I2C bus address.
         /// </summary>
         public const byte DefaultI2cAddress = 0x3C;
-
-        /// <summary>
-        /// Secondary I2C bus address.
+		
+		/// <summary>
+		/// Secondary I2C bus address.
         /// </summary>
         public const byte SecondaryI2cAddress = 0x3D;
 
