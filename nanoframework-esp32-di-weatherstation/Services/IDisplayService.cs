@@ -4,7 +4,7 @@ namespace Weatherstation.Interfaces
 {
     public interface IDisplayService
     {
-        public void Show(Screen screen, SensorsResult sensorsResult = null);
+        public void Show(Screen screen, object obj);
     }
     public enum Screen
     {

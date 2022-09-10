@@ -1,4 +1,5 @@
 ﻿using nanoFramework.Hosting;
+using System;
 using System.Diagnostics;
 using System.Threading;
 using Weatherstation.Interfaces;
@@ -63,7 +64,8 @@ namespace Weatherstation.Services
                     switch (currentScreen)
                     {
                         case Screen.DateTime_1:
-                            _displayService.Show(Screen.DateTime_1, null);
+                            DateTime currentDateTime = DateTime.UtcNow + TimeSpan.FromHours(3); // +3 GMT
+                            _displayService.Show(Screen.DateTime_1, currentDateTime);
                             break;
                         case Screen.TempHum_2:
                             _displayService.Show(Screen.TempHum_2, sensorsResult);

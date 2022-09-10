@@ -11,14 +11,14 @@ namespace Weatherstation.Services
         protected override void ExecuteAsync()
         {
             //connecting to WiFi
-            const string Ssid = "ap";
-            const string Password = "*****";
+            const string Ssid = "ssid";
+            const string Password = "password";
             // Give 60 seconds to the wifi join to happen
             CancellationTokenSource cs = new(60000);
             bool flag = false;
             while (!flag)
             {
-                var success = WifiNetworkHelper.ConnectDhcp(Ssid, Password, requiresDateTime: false, token: cs.Token);
+                var success = WifiNetworkHelper.ConnectDhcp(Ssid, Password, System.Device.Wifi.WifiReconnectionKind.Manual, requiresDateTime: false, token: cs.Token);
                 if (!success)
                 {
                     // Something went wrong, you can get details with the ConnectionError property:
@@ -32,7 +32,7 @@ namespace Weatherstation.Services
                     flag = true;
                 }
             }
-            //time synchronization           
+            //time synchronization
             Sntp.Server1 = "0.fr.pool.ntp.org";
             Sntp.UpdateNow();
             Debug.WriteLine($"Now: {DateTime.UtcNow}");

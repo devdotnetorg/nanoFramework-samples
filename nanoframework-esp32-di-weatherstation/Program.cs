@@ -25,11 +25,11 @@ namespace Weatherstation.Hosting
                 .ConfigureServices(services =>
                 {
                     //Receiving data from sensors
-                    services.AddSingleton(typeof(ISensorsService), typeof(SensorsService));
+                    services.AddSingleton(typeof(ISensorsService), typeof(SensorsSingleton));
                     //Data output to the display
-                    services.AddSingleton(typeof(IDisplayService), typeof(DisplayService));
+                    services.AddSingleton(typeof(IDisplayService), typeof(DisplaySingleton));
                     //Keyboard
-                    services.AddSingleton(typeof(IKeyboardService), typeof(KeyboardService));
+                    services.AddSingleton(typeof(IKeyboardService), typeof(KeyboardSingleton));
                     //MonitorService
                     services.AddHostedService(typeof(MonitorService));
                     //Connecting to WiFi and time synchronization
